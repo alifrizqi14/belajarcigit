@@ -21,27 +21,11 @@ class Home extends CI_Controller
             'nim' => $this->input->post('txtnim'),
             'nama' => $this->input->post('txtnama'),
             'jk' => $this->input->post('gender'),
-            'alamat' => $this->input->post('txtalamat'),
-            'foto' => $this->simpan_gambar()
+            'alamat' => $this->input->post('txtalamat')
         );
 
         $this->load->model('M_siswa');
         $this->M_siswa->create($data);
-    }
-
-    public function simpan_gambar()
-    {
-        $config['upload_path'] = 'assets/gambar/';
-        $config['allowed_type'] = 'jpg|jpeg|png';
-        $config['max_size'] = '10240';
-        $config['file_name'] = $this->nama;
-        $config['overwrite'] = true;
-
-        $this->load->library('uplaod', $config);
-        if ($this->upload->do_upload('gambar')) {
-            return $this->upload->data("file_name");
-        }
-        return "default.jpg";
     }
 
     public function ambil_data($nim)
