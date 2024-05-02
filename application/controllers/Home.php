@@ -68,8 +68,7 @@ class Home extends CI_Controller
             'nim' => $this->input->post('txtnim'),
             'nama' => $this->input->post('txtnama'),
             'jk' => $this->input->post('gender'),
-            'alamat' => $this->input->post('txtalamat'),
-            'foto' => $this->simpan_gambar()
+            'alamat' => $this->input->post('txtalamat')
         );
 
         $this->load->model('M_siswa');
