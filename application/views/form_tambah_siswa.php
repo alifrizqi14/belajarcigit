@@ -22,7 +22,7 @@
                                 <input class="form-control" type="text" name="txtnim">
                             </div>
                             <div>
-                                <label class="font-weight-bold">Nama : </label>
+                                <label class="font-weight-bold">NAMA : </label>
                                 <input class="form-control" type="text" name="txtnama">
                             </div>
                             <div>
